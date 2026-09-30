@@ -1,0 +1,16 @@
+{
+  "name": "receipt-agent",
+  "type": "ai-agent",
+  "version": "0.1.0",
+  "language": "TypeScript",
+  "buildpack": "docker",
+  "appPath": "receipt-agent",
+  "entrypoint": "deployment/ai-agent",
+  "exposure": "internet",
+  "dependencies": [
+    { "kind": "platform-resource", "name": "user-auth", "resourceType": "thunder-app" }
+  ],
+  "description": "Reads an uploaded receipt photo or PDF and proposes the merchant, date and total for the employee to review and correct. A single-turn extraction: it calls no other component, stores nothing beyond its own transcript, and never guesses a field it cannot confidently read — it leaves that field blank instead.",
+  "stories": [3],
+  "skillsPinned": ["agent-building", "thunder-authentication"]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "expense-api",
+  "type": "service",
+  "version": "0.1.0",
+  "language": "Ballerina",
+  "buildpack": "docker",
+  "appPath": "expense-api",
+  "entrypoint": "deployment/service",
+  "exposure": "internet",
+  "dependencies": [
+    { "kind": "platform-resource", "name": "user-auth", "resourceType": "thunder-app" },
+    { "kind": "platform-resource", "name": "expense-db", "resourceType": "postgres-cnpg" }
+  ],
+  "description": "Stores and serves each employee's own saved expenses and the receipt file each was extracted from. Every operation scopes rows to the caller's own identity from the gateway assertion; there is no cross-employee read. Owns no extraction logic — receipt-agent does that — and offers no edit or delete of a saved expense, only create and read.",
+  "stories": [1, 5, 6, 7, 8],
+  "skillsPinned": ["openapi-conventions", "ballerina", "thunder-authentication", "api-management"]
+}

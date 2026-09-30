@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "component": "receipt-agent",
+  "scenarios": [
+    {
+      "id": "SC-001",
+      "criteria": ["AC-receipt-extraction-a"],
+      "brief": {
+        "goal": "Get the merchant, date and total off my uploaded receipt.",
+        "facts": { "merchant": "Bridge Cafe", "date": "2026-09-12", "total": "18.40" },
+        "withholds": []
+      },
+      "rubric": {
+        "mustCover": [
+          { "id": "MC-1", "must": "Reports a merchant, date and total drawn only from the receipt", "weight": 2 }
+        ],
+        "mustNot": [
+          { "id": "MN-1", "mustNot": "Invents a merchant, date or total not shown on the receipt" }
+        ]
+      }
+    },
+    {
+      "id": "SC-002",
+      "criteria": ["AC-receipt-extraction-b"],
+      "brief": {
+        "goal": "Extract the details from this receipt, but the total is too faded to read clearly.",
+        "facts": { "merchant": "Riverside Kitchen", "date": "2026-09-25" },
+        "withholds": []
+      },
+      "rubric": {
+        "mustCover": [
+          { "id": "MC-1", "must": "Leaves the total blank rather than guessing at an unreadable value", "weight": 2 },
+          { "id": "MC-2", "must": "Still reports the merchant and date it could read" }
+        ],
+        "mustNot": [
+          { "id": "MN-1", "mustNot": "States a specific total figure for the faded amount" }
+        ]
+      }
+    }
+  ]
+}

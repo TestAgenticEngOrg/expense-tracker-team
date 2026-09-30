@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "permissions": [
+    {
+      "resource": "expenses",
+      "component": "expense-api",
+      "description": "An employee's own saved expenses and their receipts",
+      "actions": [
+        { "handle": "read", "description": "The caller's own saved expenses" },
+        { "handle": "submit", "description": "Save a new expense with its receipt" }
+      ]
+    }
+  ],
+  "groups": [
+    { "name": "Employees", "description": "Team members who log their own work expenses" }
+  ],
+  "roles": [
+    {
+      "name": "Employee",
+      "description": "Uploads receipts, corrects the extracted fields, saves expenses, and sees their own expense list and running total.",
+      "stories": [1, 2, 3, 4, 5, 6, 7, 8],
+      "grants": ["expenses:read", "expenses:submit"],
+      "assignTo": ["Employees"]
+    }
+  ],
+  "testUsers": [
+    { "username": "test-employee", "roles": ["Employee"] },
+    { "username": "test-employee-2", "roles": ["Employee"] }
+  ]
+}
