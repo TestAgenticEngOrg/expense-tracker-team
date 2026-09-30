@@ -36,10 +36,6 @@ x-aep:
       params:
         request: { regex: "(?i)\\b(casino|gambling|betting|lottery)\\b", invert: true }
       why: "Gambling is not a business expense."
-    - policy: word-count-guardrail
-      params:
-        response: { enabled: true, max: 200 }
-      why: "Replies stay short."
 ---
 
 # Role
