@@ -50,7 +50,7 @@ on this platform.
 merchant, date and total; the employee reviews and can correct any of the
 three before saving. It runs on the organization's own model connection.
 - If the agent cannot confidently read a field, that field is left blank for
-the employee to fill in themselves rather than guessed. *assumed*
+the employee to fill in themselves rather than guessed.
 Once saved, an expense record is final — there is no edit or delete after
 saving.
 - The uploaded receipt file is kept and stays attached to the saved expense,
