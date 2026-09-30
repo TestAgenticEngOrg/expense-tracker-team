@@ -28,6 +28,18 @@ x-aep:
     types: [image/jpeg, image/png, application/pdf]
     maxFiles: 1
     maxFileSizeMB: 10
+  guardrails:
+    - policy: pii-masking-regex
+      params: { email: true, phone: true }
+      why: "Receipts can carry the payer's contact details; the model never needs them."
+    - policy: regex-guardrail
+      params:
+        request: { regex: "(?i)\\b(casino|gambling|betting|lottery)\\b", invert: true }
+      why: "Gambling is not a business expense."
+    - policy: word-count-guardrail
+      params:
+        response: { enabled: true, max: 200 }
+      why: "Replies stay short."
 ---
 
 # Role
