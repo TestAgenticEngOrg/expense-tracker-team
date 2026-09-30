@@ -1,0 +1,4 @@
+apiVersion = "agentic-engineer/v1"
+name = "expense-tracker-team"
+createdAt = "2026-09-30T05:54:52Z"
+idea = "A small team wants to log their work expenses. An employee uploads a photo or\nPDF of a receipt, and the merchant, date and total are filled in automatically\nfrom the receipt; they can correct anything before saving. Each employee sees a\nlist of their own saved expenses with a running total. Nothing else: no\napprovals, no reports, no currencies beyond one."
