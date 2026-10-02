@@ -25,22 +25,22 @@ expenses, never a teammate's.
 ## User Stories
 
 1. As an employee, I want to sign in securely, so that only I can see and
- manage my own expenses.
+manage my own expenses.
 2. As an employee, I want to upload a photo or PDF of a receipt, so that I
- don't have to type expense details from scratch.
+don't have to type expense details from scratch.
 3. As an employee, I want the merchant, date and total to be automatically
- extracted from my uploaded receipt, so that I save time on data entry.
+extracted from my uploaded receipt, so that I save time on data entry.
 4. As an employee, I want to review and correct the extracted merchant, date
- and total before saving, so that inaccurate extractions never end up in my
- records.
+and total before saving, so that inaccurate extractions never end up in my
+records.
 5. As an employee, I want to save a corrected expense, so that it becomes
- part of my expense record.
+part of my expense record.
 6. As an employee, I want to see a list of all my saved expenses, so that I
- can review my spending history.
+can review my spending history.
 7. As an employee, I want to see a running total of my saved expenses, so
- that I know how much I've spent overall.
+that I know how much I've spent overall.
 8. As an employee, I want to view the original receipt file attached to a
- saved expense, so that I can double-check the details later.
+saved expense, so that I can double-check the details later.
 
 ## Product Decisions
 
